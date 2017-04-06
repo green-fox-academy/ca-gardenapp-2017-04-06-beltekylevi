@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Garden {
-  List<Plant> plants;
+  private List<Plant> plants;
 
   public Garden() {
     this.plants = new ArrayList<>();
@@ -17,5 +17,9 @@ public class Garden {
     }
 
     return result;
+  }
+
+  public void add(Plant plant) {
+    plants.add(plant);
   }
 }
