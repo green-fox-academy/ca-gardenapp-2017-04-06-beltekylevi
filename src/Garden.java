@@ -22,4 +22,13 @@ public class Garden {
   public void add(Plant plant) {
     plants.add(plant);
   }
+
+  public List<String> toFile() {
+    List<String> result = new ArrayList<>();
+
+    for (Plant plant : plants) {
+      result.add(plant.toFile());
+    }
+    return result;
+  }
 }

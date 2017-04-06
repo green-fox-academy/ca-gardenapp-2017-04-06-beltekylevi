@@ -15,9 +15,29 @@ public class Main {
     garden = new Garden();
     processData(rawLines);
 
+    if (args[0].equals("-a") && args.length == 3) {
+      String type = args[1];
+      String color = args[2];
+
+      if (type.equals("tree")) {
+        garden.add(new Tree(0, color));
+      } else if (type.equals("flower")) {
+        garden.add(new Flower(0, color));
+      }
+    }
+
     System.out.println(garden);
+    writeToFile(garden.toFile());
   }
 
+  private static void writeToFile(List<String> data) {
+    Path path = Paths.get(FILE_NAME);
+    try {
+      Files.write(path, data);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
   private static List<String> readLinesFromFile() {
     Path path = Paths.get(FILE_NAME);
     List<String> rawLines;

@@ -21,4 +21,10 @@ public class Plant {
       ", color='" + color + '\'' +
       '}';
   }
+
+  public String toFile() {
+
+//    "tree;blue;5.0"
+    return getClass().getName().toLowerCase() + ";" + color + ";" + currentWaterAmount;
+  }
 }
