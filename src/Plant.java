@@ -1,7 +1,7 @@
 public class Plant {
-  private double currentWaterAmount;
+  double currentWaterAmount;
   private double absorbPercentage;
-  private String color;
+  String color;
 
   public Plant(double currentWaterAmount, double absorbPercentage, String color) {
     this.currentWaterAmount = currentWaterAmount;
@@ -13,14 +13,6 @@ public class Plant {
     currentWaterAmount += amount * absorbPercentage;
   }
 
-  @Override
-  public String toString() {
-    return "Plant{" +
-      "currentWaterAmount=" + currentWaterAmount +
-      ", absorbPercentage=" + absorbPercentage +
-      ", color='" + color + '\'' +
-      '}';
-  }
 
   public String toFile() {
 

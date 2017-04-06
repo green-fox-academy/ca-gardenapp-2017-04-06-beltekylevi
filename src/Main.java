@@ -24,9 +24,9 @@ public class Main {
       } else if (type.equals("flower")) {
         garden.add(new Flower(0, color));
       }
+    } else if (args[0].equals("-l") && args.length == 1) {
+      System.out.println(garden.toString());
     }
-
-    System.out.println(garden);
     writeToFile(garden.toFile());
   }
 
