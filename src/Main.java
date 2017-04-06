@@ -27,6 +27,7 @@ public class Main {
     } else if (args[0].equals("-l") && args.length == 1) {
       System.out.println(garden.toString());
     }
+
     writeToFile(garden.toFile());
   }
 
